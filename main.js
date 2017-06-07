@@ -28,5 +28,5 @@ addButton.addEventListener('click', function addToDos() {
   list.appendChild(added);
 
 //clear text box upon clicking 'add item'
-  document.getElementById('enterItem').innerHTML = ' ';
+  document.getElementById('enterItem').value = ' ';
   });
