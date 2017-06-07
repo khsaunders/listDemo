@@ -1,0 +1,51 @@
+body{
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1{
+  font-family: "Bubbler One", sans-serif;
+  font-size: 9em;
+  letter-spacing: 15px;
+  margin:  5% auto 5% auto ;
+  text-align: center;
+}
+
+#listWrapper{
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+input{
+  width: 50%;
+  outline: none;
+  border: none;
+  border-bottom: solid black 1px;
+  font-size: 2em;
+  margin-right: 2%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#innerWrapper{
+  width: 65%;
+  margin: auto;
+}
+
+button{
+  background-color: black;
+  padding: .75% 1.5%;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+  text-align: left;
+  font-size: 1.65em;
+}
