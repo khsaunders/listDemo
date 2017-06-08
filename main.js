@@ -22,22 +22,20 @@ addButton.addEventListener('click', function addToDos() {
 //turn value from newItem into text node --unfortunately, we will get a typeError if we don't create a new node;
   var t = document.createTextNode(newItem);
 
-  var newBtn = document.createElement('button');
+  // //assign id to new delete buttons
+  // newBtn.id = 'deleteBtn';
+  //
+  // var deleteText = newBtn.innerHTML = 'delete';
 
-  //assign id to new delete buttons
-  newBtn.id = 'deleteBtn';
-
-  var deleteText = newBtn.innerHTML = 'delete';
-
-  console.log(added, newBtn);
+  // console.log(added, newBtn);
 
   //this line provided by stack overflow user T.J. here: https://stackoverflow.com/posts/34896387/revisions
   //they provide code based on event delegation
   document.addEventListener('click',function(e){
 
-     if(e.target && e.target.id== 'deleteBtn'){
+     if(e.target && e.target.id== 'newLi'){
        console.log('delete click');
-       this.style('display', 'none');
+       e.target.remove(t);
   }
 });
 
@@ -46,9 +44,7 @@ addButton.addEventListener('click', function addToDos() {
 
   //append these items to our HTML element "listItems" (list being previously defined variable);
   list.appendChild(added);
-
-//append delete button with each li. crafted from vars newBtn and deleteText
-  list.appendChild(newBtn);
+  added.id='newLi'
 
 //clear text box upon clicking 'add item';
   document.getElementById('enterItem').value = ' ';
