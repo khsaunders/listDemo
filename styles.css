@@ -6,7 +6,7 @@ body{
 h1{
   font-family: "Bubbler One", sans-serif;
   font-size: 9em;
-  letter-spacing: 15px;
+  letter-spacing: 18px;
   margin:  5% auto 5% auto ;
   text-align: center;
 }
@@ -44,8 +44,14 @@ button:hover{
   cursor: pointer;
 }
 
+ul{
+  margin: none;
+}
+
 li{
+  width: 30%;
   list-style: none;
   text-align: left;
   font-size: 1.65em;
+  margin: none;
 }
