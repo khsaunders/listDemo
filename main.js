@@ -24,10 +24,22 @@ addButton.addEventListener('click', function addToDos() {
 
   var newBtn = document.createElement('button');
 
+  //assign id to new delete buttons
+  newBtn.id = 'deleteBtn';
 
   var deleteText = newBtn.innerHTML = 'delete';
 
   console.log(added, newBtn);
+
+  //this line provided by stack overflow user T.J. here: https://stackoverflow.com/posts/34896387/revisions
+  //they provide code based on event delegation
+  document.addEventListener('click',function(e){
+
+     if(e.target && e.target.id== 'deleteBtn'){
+       console.log('delete click');
+       this.style('display', 'none');
+  }
+});
 
 //append text node content to li;
   added.appendChild(t);
@@ -35,14 +47,15 @@ addButton.addEventListener('click', function addToDos() {
   //append these items to our HTML element "listItems" (list being previously defined variable);
   list.appendChild(added);
 
+//append delete button with each li. crafted from vars newBtn and deleteText
   list.appendChild(newBtn);
 
-//Unnecessary:
 //clear text box upon clicking 'add item';
   document.getElementById('enterItem').value = ' ';
-  });
 
 
 /*---------------------------------------DELETE ITEM FROM LIST-----------------------------------------*/
 
   //i want a delete button for each list item that triggers a modal pop up for asking user if they want to delete;
+
+});
