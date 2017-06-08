@@ -15,7 +15,7 @@ Practice manipulating elements in the DOM by creating a To-Do list app that both
 3) Remove element
 
 ### Concepts Covered
-* Selecting HTML elements
+* Selecting existing HTML elements
 * Dynamically creating HTML elements
 * Appending content to HTML document
-* Removing content from HTML document 
+* Removing content from HTML document
