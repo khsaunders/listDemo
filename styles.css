@@ -28,7 +28,7 @@ input{
 }
 
 #innerWrapper{
-  width: 65%;
+  width: 45%;
   margin: auto;
 }
 
@@ -49,7 +49,7 @@ ul{
 }
 
 li{
-  width: 30%;
+  width: 80%;
   list-style: none;
   text-align: left;
   font-size: 1.65em;

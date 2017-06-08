@@ -22,36 +22,32 @@ addButton.addEventListener('click', function addToDos() {
 //turn value from newItem into text node --unfortunately, we will get a typeError if we don't create a new node;
   var t = document.createTextNode(newItem);
 
-  // //assign id to new delete buttons
-  // newBtn.id = 'deleteBtn';
-  //
-  // var deleteText = newBtn.innerHTML = 'delete';
+  //append text node content to li;
+    added.appendChild(t);
 
-  // console.log(added, newBtn);
+    //append these items to our HTML element "listItems" (list being previously defined variable);
+    list.appendChild(added);
+    added.id='newLi'
 
-  //this line provided by stack overflow user T.J. here: https://stackoverflow.com/posts/34896387/revisions
-  //they provide code based on event delegation
+  //clear text box upon clicking 'add item';
+    document.getElementById('enterItem').value = ' ';
+
+/*------------------------------------DELETE ITEM FROM LIST-----------------------------------------*/
+
+//notice this is still within original function
+
+  //targeting document as a whole and then...
   document.addEventListener('click',function(e){
 
+//...verifying if target has desired id;
+//idea provided by stack overflow user T.J. here: https://stackoverflow.com/posts/34896387/revisions
      if(e.target && e.target.id== 'newLi'){
+       // ...if so, do the following...
        console.log('delete click');
+       //e.target means that it will only remove that specific li instead of allllll the li's
        e.target.remove(t);
   }
 });
 
-//append text node content to li;
-  added.appendChild(t);
-
-  //append these items to our HTML element "listItems" (list being previously defined variable);
-  list.appendChild(added);
-  added.id='newLi'
-
-//clear text box upon clicking 'add item';
-  document.getElementById('enterItem').value = ' ';
-
-
-/*---------------------------------------DELETE ITEM FROM LIST-----------------------------------------*/
-
-  //i want a delete button for each list item that triggers a modal pop up for asking user if they want to delete;
 
 });
