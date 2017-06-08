@@ -1,5 +1,6 @@
 # listDemo
 Practice manipulating elements in the DOM by creating a To-Do list app that both adds and deletes items.
+No libraries or frameworks needed. Vanilla JS all day. 
 
 ### General Workflow
 
